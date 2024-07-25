@@ -41,6 +41,7 @@ class MyNet(nn.Module):
 net = MyNet()
 print(net)
 writer = SummaryWriter('logs')
+
 for i, data in enumerate(dataloader):
     imgs, target = data
     print(imgs.shape)   # torch.Size([64, 3, 32, 32])
@@ -50,4 +51,5 @@ for i, data in enumerate(dataloader):
     writer.add_images('input', imgs, i)
     writer.add_images('output', output, i)
     break
+
 writer.close()
