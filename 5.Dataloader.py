@@ -11,10 +11,12 @@ print(img.shape)
 print(target)
 
 writer = SummaryWriter('logs')
+
 for epoch in range(2):
     for i, data in enumerate(test_loader):
         imgs, target = data
         # print(imgs.shape)
         # print(target.shape)
         writer.add_images(f'log {epoch}', imgs, i)
+
 writer.close()
