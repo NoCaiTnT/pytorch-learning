@@ -32,5 +32,4 @@ img2_array = np.array(img2_PIL)
 print(img2_array.shape)
 writer.add_image("test", img2_array, 2, dataformats='HWC')
 
-
 writer.close()
