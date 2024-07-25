@@ -34,6 +34,7 @@ writer.add_image("Compose_img", img1_compose)
 compose2 = transforms.Compose([
               transforms.RandomCrop((300, 300)),
               transforms.ToTensor()])
+
 for i in range(10):
     img1_randomcrop = compose2(img1_PIL)
     writer.add_image("RandomCrop_img", img1_randomcrop, i)
