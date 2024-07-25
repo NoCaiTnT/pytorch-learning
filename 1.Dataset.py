@@ -20,6 +20,7 @@
 #    ↑             ↑                   ↑
 # 杂乱的数据  提取数据和标签并编号   将Dataset的数据进行打包
 
+# 代码
 from torch.utils.data import Dataset, DataLoader
 from PIL import Image
 import os
