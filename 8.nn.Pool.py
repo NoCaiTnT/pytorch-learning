@@ -31,6 +31,7 @@ dataloader = DataLoader(dataset, batch_size=64)
 
 
 writer = SummaryWriter('logs')
+
 for i, data in enumerate(dataloader):
     imgs, target = data
     output = net(imgs)
@@ -38,4 +39,5 @@ for i, data in enumerate(dataloader):
     writer.add_images('input', imgs, i)
     writer.add_images('output', output, i)
     break
+
 writer.close()
