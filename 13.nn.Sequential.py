@@ -28,7 +28,6 @@ class MyCIFAR10(nn.Module):
         )
         self.layer5 = nn.Sequential(
             nn.Linear(in_features=64, out_features=10),
-            nn.ReLU()
         )
 
     def forward(self, x):
